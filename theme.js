@@ -1,11 +1,11 @@
 export default theme = {
     light: {
         primary: '#FFF',
-        secoundary: '#000000',
+        secoundary: '#203A43',
         accent: '#99f2c8',
-        success: '#038E00',
-        error: '#880015',
-        warning: '#E0A100',
+        success: '#04F500',
+        error: '#E00022',
+        warning: '#FFCB47',
         // linearGradient: [
         //     '#e0aaff', 
         //     '#c77dff',
@@ -21,6 +21,11 @@ export default theme = {
             '#203A43',
             '#2C5364'
         ]
+        // linearGradient: [ //Moonlit Asteroid
+        //     '#FFF',
+        //     '#FFF',
+        //     '#FFF'
+        // ]
     },
     dark: {
         primary: '#FFB703',

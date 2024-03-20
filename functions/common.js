@@ -6,3 +6,21 @@ export function hexToRgba(hex, alpha = 1) {
 
     return `rgba(${r}, ${g}, ${b}, ${alpha})`;
 }
+
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+export async function checkAsyncStorage(hex, alpha = 1) {
+    try {
+        const keys = await AsyncStorage.getAllKeys();
+        console.log(keys)
+        const items = await AsyncStorage.multiGet(keys);
+
+        items.forEach((item) => {
+            console.log(`${item[0]}: ${item[1]}`);
+        });
+    } catch (error) {
+        console.error('Error accessing AsyncStorage: ', error);
+    }
+};
+
+// Wywołaj funkcję, aby zobaczyć zawartość AsyncStorage

@@ -1,15 +1,17 @@
 import { StyleSheet } from 'react-native';
 import theme from './theme';
+import { hexToRgba } from './functions/common';
 export default StyleSheet.create({
     shadow: {
-        shadowColor: "#99f2c8",
+        shadowColor: theme.light.accent,
         shadowOffset: {
             width: 0,
-            height: 10,
+            height: 12,
         },
-        shadowOpacity: 0.25,
-        shadowRadius: 20,
-        elevation: 20
+        shadowOpacity: 0.58,
+        shadowRadius: 16.00,
+        
+        elevation: 24,
     },
     //=========MAIN=========
     container: {
@@ -76,28 +78,30 @@ export default StyleSheet.create({
         borderRadius: 999,
         paddingHorizontal: 32,
         paddingVertical: 16,
-        shadowColor: "#99f2c8",
+        shadowColor: theme.light.accent,
         shadowOffset: {
             width: 0,
-            height: 10,
+            height: 12,
         },
-        shadowOpacity: 0.25,
-        shadowRadius: 20,
-        elevation: 20,
+        shadowOpacity: 0.58,
+        shadowRadius: 16.00,
+        
+        elevation: 24,
         alignItems: 'center',
         justifyContent: 'center',
     },
     pressableNewSpending: {
         borderRadius: 999,
         padding: 16,
-        shadowColor: "#99f2c8",
+        shadowColor: theme.light.accent,
         shadowOffset: {
             width: 0,
-            height: 10,
+            height: 12,
         },
-        shadowOpacity: 0.25,
-        shadowRadius: 20,
-        elevation: 20,
+        shadowOpacity: 0.58,
+        shadowRadius: 16.00,
+        
+        elevation: 24,
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center',
@@ -118,43 +122,31 @@ export default StyleSheet.create({
         justifyContent: 'center',
     },
     pressableText: {
-        // borderRadius: 30,
-        // paddingHorizontal: 32,
-        // paddingVertical: 16,
-        // shadowColor: "#99f2c8",
-        // shadowOffset: {
-        //     width: 0,
-        //     height: 10,
-        // },
-        // shadowOpacity: 0.25,
-        // shadowRadius: 20,
-        // elevation: 20
         flexDirection: 'row',
         justifyContent: 'center',
         alignItems: 'center',
     },
     spendingItem: {
-        backgroundColor: 'rgba(255,255,255,0.1)',
+        backgroundColor: hexToRgba(theme.light.accent, 0.1),
         paddingVertical: 16,
         margin: 8,
         borderRadius: 10
     },
     spendingItemHeader: {
-        flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'space-between',
+        justifyContent: 'center',
         margin: 8
     },
-    spendingItemHeaderLeft: {
+    spendingItemBody: {
         flexDirection: 'row',
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        margin: 8
     },
-    spendingItemHeaderRight: {
+    spendingItemFooter: {
         flexDirection: 'row',
         alignItems: 'center',
-        width: '60%',
-        justifyContent: 'space-between'
+        justifyContent: 'space-around',
     },
     //===================================
     justifyCenter: {
@@ -166,7 +158,32 @@ export default StyleSheet.create({
     wrapper: {
         width: '300px',
         height: '300px'
-    }
+    },
+    menuItem: {
+        padding: 20, 
+        borderBottomWidth: 1, 
+        borderColor: theme.light.accent,
+    },
+    menuItemText: {
+        fontSize: 18,
+        color: theme.light.primary,
+        textAlign: 'center'
+    },
+    modalView: {
+        position: "absolute",
+        top: 100, // Positions the modal at the top
+        width: '100%',
+        backgroundColor: hexToRgba(theme.light.secoundary, 0.9),
+        padding: 20,
+        shadowColor: theme.light.accent,
+        shadowOffset: {
+            width: 0,
+            height: 12
+        },
+        shadowOpacity: 0.58,
+        shadowRadius: 16.00,
 
+        elevation: 24
+    },
 
 });
