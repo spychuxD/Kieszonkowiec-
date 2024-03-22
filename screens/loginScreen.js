@@ -18,6 +18,9 @@ import { auth } from "../firebaseConfig";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import CustomDialog from "../components/dialog";
 import { useAuth } from "../contexts/AuthContext";
+import { ref, set } from 'firebase/database';
+import { db } from '../firebaseConfig';
+import uuid from 'react-native-uuid';
 export default function LoginScreen() {
   const { currentUser } = useAuth(); // Użyj currentUser do sprawdzenia, czy użytkownik jest zalogowany
   const navigation = useNavigation();
@@ -35,6 +38,10 @@ export default function LoginScreen() {
         "spychaczxd13"
       );
       console.log("Zalogowano użytkownika");
+      set(ref(db, 'users/' + uuid.v4()), {
+        username: 'dawid.spychalski00@gmail.com',
+        email: 'dawid.spychalski00@gmail.com',
+      });
     } catch (error) {
       if (error.code === "auth/invalid-credential") {
         setDialogTitle("Błąd podczas logowania");

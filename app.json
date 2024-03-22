@@ -9,7 +9,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#2C5364"
+      "backgroundColor": "#99f2c8"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -21,7 +21,7 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#2C5364"
+        "backgroundColor": "#99f2c8"
       },
       "package": "com.kieszonkowiec.kieszonkowiec",
       "googleServicesFile": "./google-services.json"
